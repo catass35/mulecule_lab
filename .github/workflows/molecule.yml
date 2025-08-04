@@ -31,15 +31,15 @@ jobs:
 
       # Update packages
       - name: Update packages
-        run: apt-get update
+        run: sudo apt-get update
 
       # Install docker
       - name: Install docker
-        run: apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+        run: sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
         
       # Install python and pip
       - name: Install python3 and pip
-        run: apt-get install python3 py3-pip
+        run: sudo apt-get install python3 py3-pip
 
       # Runs a set of commands using the runners shell
       - name: Install Ansible, Molecule and Testinfra
