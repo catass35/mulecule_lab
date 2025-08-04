@@ -1,1 +1,25 @@
+---
+dependency:
+  name: galaxy
 
+driver:
+  name: docker
+
+platforms:
+  - name: ubuntu
+    image: ubuntu:22.04
+    privileged: true
+    pre_build_image: true
+
+  - name: debian
+    image: debian:bullseye
+    privileged: true
+    pre_build_image: true
+
+provisioner:
+  name: ansible
+  playbooks:
+    converge: converge.yml
+
+verifier:
+  name: testinfra
