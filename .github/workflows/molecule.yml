@@ -51,4 +51,4 @@ jobs:
 
       # Runs Molecule tests
       - name: Runs molecule test
-        run: molecule test -vvv
+        run: molecule test -h
