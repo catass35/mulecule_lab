@@ -31,7 +31,7 @@ jobs:
         run: pip3 install ansible molecule molecule-plugins[docker] yamllint ansible-lint
 
       - name: Setup workdir
-        run: pwd ; ls
+        run: pwd ; ls ; tree
 
       - name: Run Molecule tests.
         run: molecule test
