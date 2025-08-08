@@ -40,3 +40,11 @@ jobs:
           ANSIBLE_FORCE_COLOR: '1'
           MOLECULE_DISTRO: ${{ matrix.distro }}
         working-directory: /home/runner/work/mulecule_lab/mulecule_lab
+
+      - name: Run Molecule lint.
+        run: molecule lint
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
+        working-directory: /home/runner/work/mulecule_lab/mulecule_lab
