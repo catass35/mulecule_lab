@@ -32,7 +32,7 @@ jobs:
 
       - name: Run lint.
         run: |
-          yamllint
+          yamllint .
           ansible-lint
 
       - name: Run Molecule tests.
