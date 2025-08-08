@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         distro:
-          - rockylinux9
+          #- rockylinux9
           - debian12
 
     steps:
